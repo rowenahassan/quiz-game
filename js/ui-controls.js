@@ -1,11 +1,3 @@
-/**
- * @fileoverview UI Controls - Custom select dropdowns and number input handlers
- * Extracted from inline HTML for better organization
- */
-
-/**
- * Initialize custom select dropdowns
- */
 function initCustomSelects() {
   document.querySelectorAll('.custom-select').forEach(select => {
     const trigger = select.querySelector('.custom-select-trigger');
@@ -41,9 +33,6 @@ function initCustomSelects() {
   });
 }
 
-/**
- * Initialize number input custom buttons
- */
 function initNumberInputs() {
   document.querySelectorAll('.number-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -62,16 +51,12 @@ function initNumberInputs() {
   });
 }
 
-/**
- * Close dropdowns when clicking outside
- */
 function initClickOutside() {
   document.addEventListener('click', () => {
     document.querySelectorAll('.custom-select.open').forEach(s => s.classList.remove('open'));
   });
 }
 
-// Initialize all UI controls when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   initCustomSelects();
   initNumberInputs();
